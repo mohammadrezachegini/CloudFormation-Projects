@@ -5,6 +5,14 @@ Parameters:
   MyKeyName:
     Description: Select the Key Name to be used for the instance.
     Type: AWS::EC2::KeyPair::KeyName
+  MyAvailabilityZone:
+    Description: Select the AZ to be used for the instance.
+    Type: String
+    Default: us-east-2a
+    AllowedValues:
+    - us-east-2a
+    - us-east-2b
+    - us-east-2c
 
 Resources:
   DevEC2Instance:
@@ -16,6 +24,7 @@ Resources:
       SecurityGroups:
       - default
       - !Ref SSHSecurityGroup
+      AvaliabilityZone: !Ref MyAvailabilityZone
 
       SSHSecurityGroup:
         Type: AWS::EC2::SecurityGroups
