@@ -3,6 +3,7 @@ Resources:
   DevEC2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
-      ImageId: ami-0cd3dfa4e37921605
+      ImageId: ami-063d43db0594b521b
       InstanceType: t2.small
+      SubnetId: "subnet-xxxxxxxxxxxxxxxx"
       KeyName: cfn-key-2
