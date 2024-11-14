@@ -39,7 +39,7 @@ Resources:
           commands:
           services:
     Properties:
-      ImageId: ami-0db014aa99d969f2f
+      ImageId: ami-013ce69c368262d19
       InstanceType: t2.micro
       KeyName: !Ref KeyName
       SecurityGroups:

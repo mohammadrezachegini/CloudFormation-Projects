@@ -28,8 +28,21 @@ Resources:
       AWS::CloudFormation::Init:
         config:
           packages:
+            yum:
+              java-1.8.0-openjdk.x86_64: []
+              java-1.8.0-openjdk-devel: []
+              tomcat8: []
           groups:
+            groupone: {}
+            grouptwo:
+              gid: "501"
           users:
+            user1:
+              groups:
+              - groupone
+              - grouptwo
+              uid: "501"
+              homeDir: "/home"
           sources:
           files:
           commands:
